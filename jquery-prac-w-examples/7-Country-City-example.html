@@ -1,0 +1,48 @@
+<html>
+<head>
+
+<script src="jquery.js" type="text/javascript" ></script>
+<script>
+    var _countries = [];
+    _countries.push({CountryID:1 , Name:'Pakistan'});
+    _countries.push({CountryID:2 , Name:'India'});
+    _countries.push({CountryID:3 , Name:'USA'});
+	
+    var _cities = [];
+    _cities.push({CityID:1 , Name:'Lahore'});
+    _cities.push({CityID:2 , Name:'Islamabad'});
+    _cities.push({CityID:3 , Name:'Karachi'});
+
+    _cities.push({CityID:4 , Name:'Delhi'});
+    _cities.push({CityID:5 , Name:'Bombay'});
+
+    _cities.push({CityID:6 , Name:'NewYork'});
+    _cities.push({CityID:7 , Name:'Texas'});
+
+    $(document).ready(function(){
+        var cmb1 = $("#country");
+
+        var opt = $("<option>");
+        opt.attr("value","0");
+        opt.text("--Select--");
+
+
+        for(var i=0;i<_countries.length;i++){
+            var opt = $("<option>");
+            opt.attr("value",_countries[i].CountryID);
+            opt.text(_countries[i].Name);
+            
+            cmb1.append(opt);
+        }
+    });
+	
+</script>
+
+</head>
+<body >
+
+    Country:<select id="country"></select><br>
+    City:<select id="city"></select>
+
+</body>
+</html>

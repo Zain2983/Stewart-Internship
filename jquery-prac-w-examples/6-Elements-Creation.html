@@ -1,0 +1,54 @@
+<html>
+<head>
+
+<script src="jquery.js" type="text/javascript" ></script>
+<script>
+	
+	$(document).ready(function(){
+        $("#btnCreate").click(function(){
+
+            // // Create a text box in DIV on the click of the button
+            // var txt = $("<input>").attr("type","text").attr("class","txt");
+            // $(".container").append(txt);
+
+            // create a dropdown box in DIV
+            var cmb = $("<select>");
+            var opt = $("<option>").attr("value","1").text("Pakistan");
+            cmb.append(opt);   
+            var opt = $("<option>").attr("value","2").text("India");
+            cmb.append(opt); 
+            var opt = $("<option>").attr("value","4").text("USA");
+            cmb.append(opt);
+            $(".container").append(cmb);
+
+            // create a dropdown box in DIV and do some function when cmb changes
+            var cmb = $("<select>");
+            var opt = $("<option>").attr("value","1").text("Pakistan");
+            cmb.append(opt);   
+            var opt = $("<option>").attr("value","2").text("India");
+            cmb.append(opt); 
+            var opt = $("<option>").attr("value","4").text("USA");
+            cmb.append(opt);
+            cmb.change(function(){
+                var v = $(this).val();
+                console.log("Current Value : " , v);
+            })
+            $(".container").append(cmb);
+
+        });
+
+    });
+	
+	
+</script>
+
+</head>
+<body >
+
+<input type="button" id="btnCreate" value="Create"/>
+<div class="container">
+
+</div>
+
+</body>
+</html>
