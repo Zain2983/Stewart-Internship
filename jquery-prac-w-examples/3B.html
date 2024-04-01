@@ -1,0 +1,34 @@
+<!-- /////////////////////////////////////////////////
+/////////////////////////////////////////////////
+// Calculator
+/////////////////////////////////////////////////
+///////////////////////////////////////////////// -->
+
+// We have used 2 types of selectors , tag based and selector based
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"  />
+    <title>Example 4</title>
+
+    <script src="../other-files/jquery-3.7.1.js"></script>
+    <script>
+      $(document).ready(ReadyMain);
+      function ReadyMain(){
+        // alert("in ready function, style will be applied after alert");
+        $("p").css('border', 'solid 1px red');
+
+        alert("next style will be applied after alert");
+        $("#para").css('background-color', 'yellow');
+
+        // alert("check now in chrome DEV tools");
+      }
+    </script>
+  </head>
+  <body>
+    <p>Hello World</p>
+    <p id="para">Hello Tello</p>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+
+<!-- /////////////////////////////////////////////////
+/////////////////////////////////////////////////
+// Adding 2 numbers using the textboxes
+/////////////////////////////////////////////////
+///////////////////////////////////////////////// -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example 2</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#btnOK").click(function () {
+          var a = $("#txtFirst").val();
+          var b = $("#txtSecond").val();
+          var r = parseInt(a) + parseInt(b);
+          $("#txtResult").val(r);
+          return false;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    First: <input type="text" name="" id="txtFirst"><br>
+    Second: <input type="text" name="" id="txtSecond"><br>
+    <input type="submit" value="OK" id="btnOK" /> <br>
+    Result: <input type="text" name="" id="txtResult"> <br>
+
+  </body>
+</html>
+
+

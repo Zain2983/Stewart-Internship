@@ -1,0 +1,29 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"  />
+    <title>FileControl Example</title>
+
+    <script src="../other-files/jquery-3.7.1.js"></script>
+
+    </style>
+    <script>
+        $("#myfile").change(function(){
+            var files=$(this).get(0).files;
+            if(files.lenght >0){
+                for(var ind=0;ind<files.lenght;ind++){
+                    console.log(files[ind]);
+                }
+            }
+        })
+    </script>
+  </head>
+  <body>
+    Picture:<input type="file" id="myfile" multiple/>
+    <br>
+    <input type="button" id="btnTest" value="Open" />
+  </body>
+</html>

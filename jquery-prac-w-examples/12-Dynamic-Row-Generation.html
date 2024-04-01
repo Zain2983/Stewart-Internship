@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <script
+      src="../other-files/jquery-3.7.1.js"
+      type="text/javascript"
+    ></script>
+    <style>
+        .error{
+            background-color: red;
+        }
+    </style>
+    <script>
+      $(function () {
+        var $table = $("#tblSubjects");
+
+        $("#btnAdd").click(function () {
+          if ($table.find("tr").length == 5) {
+            alert("Max limit of 5 Subjects has been reached !");
+            return;
+          }
+
+          var $tr = $("<tr>");
+
+          var $td = $("<td>").text("Subjects");
+          $tr.append($td);
+
+          $td = $("<td>");
+          var $textbox = $("<input>")
+            .attr("id", "txtSubject")
+            .attr("type", "text");
+          $td.append($textbox);
+          $tr.append($td);
+
+          var $td = $("<td>").text("Marks");
+          $tr.append($td);
+
+          $td = $("<td>");
+          $textbox = $("<input>").attr("id", "txtMarks").attr("type", "text");
+          $td.append($textbox);
+          $tr.append($td);
+
+          $td = $("<td>");
+          var $button = $("<button>").text("X");
+          $td.append($button);
+          $tr.append($td);
+          $table.append($tr);
+
+          $button.click(function () {
+            var result = confirm("Do you want to remove ?");
+            if (result) {
+              $button.closest("tr").remove();
+            } else {
+            }
+          });
+        });
+
+        $("#btnSave").click(function () {
+          var div = $("#outputTable");
+          $("#tblSubjects tr").each(function () {
+            var subject = $(this).find("#txtSubject").val();
+            var marks = $(this).find("#txtMarks").val();
+
+            if(subject==""){
+                $(this).find("#txtSubject").addClass('error');
+            }else{
+                $(this).find("#txtSubject").removeClass('error');
+            }
+            if(marks==""){
+                $(this).find("#txtMarks").addClass('error');
+            }else{
+                $(this).find("#txtMarks").removeClass('error');
+            }
+
+            var status = "";
+            if(parseInt(marks)>50){
+                status = "Pass";
+            }else{
+                status = "Fail";
+            }
+
+            div.append("Subject : " + subject + " - Marks : " + marks + " - Status : " + status + "<br>");
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div>
+      <table>
+        <tr>
+          <td>
+            <input type="button" name="" id="btnAdd" value="Add Subject" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table id="tblSubjects"></table>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="button" name="" id="btnSave" value="Save" />
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div id="outputTable"></div>
+  </body>
+</html>

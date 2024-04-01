@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example 4</title>
+
+    <script src="../other-files/jquery-3.7.1.js"></script>
+    <script>
+      $(function () {
+        var $span = $("span.myspan");
+        $span.click(function () {
+          var $this = $(this);
+          $this.hide();
+          var txt = $this.text();
+          var inpt = $("<input>").attr("type", "text").val(txt);
+          var btnS = $("<button>").attr("type", "button").text("Save");
+          var btnC = $("<button>").attr("type", "button").text("Cancel");
+
+          var div = $("<div>").addClass("wrapper");
+          div.append(inpt);
+          div.append(btnS);
+          div.append(btnC);
+          $this.closest(".mywrapper").append(div);
+          btnS.click(function () {
+            var ntxt = inpt.val();
+            $this.text(ntxt);
+            $this.show();
+            $(this).closest(".wrapper").remove();
+          });
+          btnC.click(function () {
+            $this.show();
+            $(this).closest(".wrapper").remove();
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="mywrapper">
+      <span class="myspan">data is here</span>
+    </div>
+    <div class="mywrapper">
+      <span class="myspan">data is here</span>
+    </div>
+  </body>
+</html>

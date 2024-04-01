@@ -1,0 +1,28 @@
+
+ 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example 1</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script>
+      $(document).ready(ReadyMain);
+      function ReadyMain() {
+        alert("DOM is ready");
+      }
+      function Main() {
+        alert("Body Ready");
+      }
+    </script>
+  </head>
+  <body onload="return Main();">
+    <h1>This is just a testing site</h1>
+  </body>
+</html>
+
+
+/////////////////////////////////////////////////
+//////    DOM Ready and Body Ready          /////
+/////////////////////////////////////////////////

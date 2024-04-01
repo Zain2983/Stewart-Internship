@@ -1,0 +1,59 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"  />
+    <title>Accordion Example</title>
+
+    <script src="../other-files/jquery-3.7.1.js"></script>
+    <style type="text/css">
+        div.accordpanel div.header{
+            background-color: gray;
+            padding: 2px;
+            color:white;
+            border-bottom:solid 2px #336699;
+        }
+        div.accordpanel div.content{
+            display:none;
+            background-color: White;
+            border-color: black;
+            border-style: solid;
+        }
+    </style>
+    <script>
+        $(function(){
+            $(".accordpanel .header").click(function(){
+                //$(this).closest(".main_wrapper").find(".current").hide();
+                var conpanel = $(this).next();
+
+                if(conpanel.is(":visible")){
+                    conpanel.hide();
+                }
+                else{
+                    $(this).closest(".main_wrapper").find(".current").removeClass("current").slideUp();
+                    conpanel.addClass('current').slideDown();
+                }
+                
+            });
+        });
+    </script>
+  </head>
+  <body>
+    <div class="main_wrapper">
+        <div class="accordpanel">
+            <div class="header">Header 1</div>
+            <div class="content">The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.</div>
+        </div>
+        <div class="accordpanel">
+            <div class="header">Header 2</div>
+            <div class="content">The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.</div>
+        </div>
+        <div class="accordpanel">
+            <div class="header">Header 3</div>
+            <div class="content">The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.The Holiday season is here and THE HOLIDAYS ARE JUST AROUND THE CORNER.</div>
+        </div>
+    </div>
+  </body>
+</html>

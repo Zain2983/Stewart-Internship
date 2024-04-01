@@ -1,0 +1,93 @@
+<!-- /////////////////////////////////////////////////
+/////////////////////////////////////////////////
+// Calculator
+/////////////////////////////////////////////////
+///////////////////////////////////////////////// -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example 3</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 300px;
+        background-color: grey;
+        border: 2px solid red;
+      }
+      .box2 {
+        width: 300px;
+      }
+    </style>
+    <script src="../other-files/jquery-3.7.1.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#btnShwTxt").click(function () {
+          console.log($("#mydiv").text());
+          return false;
+        });
+        $("#btnShwHTML").click(function () {
+          console.log($("#mydiv").html());
+          return false;
+        });
+        $("#btnRmvCss").click(function () {
+          $("#mydiv").css("display", "none");
+          return false;
+        });
+        $("#btnAC").click(function () {
+          $("#mydiv").addClass("box2");
+          return false;
+        });
+        $("#btnRC").click(function () {
+          $("#mydiv").removeClass("box2");
+          return false;
+        });
+        $("#btnShow").click(function () {
+          $("#mydiv").show();
+          return false;
+        });
+        $("#btnHide").click(function () {
+          $("#mydiv").hide();
+          return false;
+        });
+        $("#btnSlideUp").click(function () {
+          $("#mydiv").slideUp();
+          return false;
+        });
+        $("#btnSlideDown").click(function () {
+          $("#mydiv").slideDown();
+          return false;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <input type="submit" value="AddClass" id="btnAC" />
+    <input type="submit" value="RemoveClass" id="btnRC" />
+    <input type="submit" value="Show" id="btnShow" />
+    <input type="submit" value="Hide" id="btnHide" />
+    <br />
+    <input type="submit" value="SlideUp" id="btnSlideUp" />
+    <input type="submit" value="SlideDown" id="btnSlideDown" />
+    <input type="submit" value="RemoveThruCSS" id="btnRmvCss" />
+    <br />
+    <input type="submit" value="Show HTML" id="btnShwHTML" />
+    <input type="submit" value="Show Text" id="btnShwTxt" />
+
+    <br /><br />
+    <div class="box" id="mydiv">
+      <p>Hello World</p>
+      <span>Testing</span>
+    </div>
+  </body>
+</html>
+
+<!-- 
+    we use mainly 3 atributes listed below
+    1 - val  = used with form elements ( mtlb ke forms wagheira ma use hota hai yeh)
+    2 - text = used with textual elements ( i.e span - paragraph(p) - labels )
+    3 - html = used with containers ( i.e div )
+
+-->
