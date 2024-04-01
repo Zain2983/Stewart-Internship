@@ -1,0 +1,34 @@
+<!-- Write event handler for click of button (id=btnShow) and 
+    show your roll number in alert.
+
+Hint:
+use onclick property of button -->
+
+<html>
+  <head>
+    <title>Task6</title>
+    <script type="text/javascript">
+      var r_no = 6260 ;
+      var name = "Zain";
+      function Main() {
+        var btn = document.getElementById("btnShow");
+        btn.onclick = function () {
+          alert("Name : " + name );
+        };
+      }
+
+      function btn_clck() {
+        var btn1 = document.getElementById("btnShow2");
+        btn1.onclick = function () {
+          alert("Roll Number : " + r_no);
+        };
+      }
+    </script>
+  </head>
+  <body onload="Main();">
+    <button id="btnShow">Show Name</button>
+
+    <!-- Bind event on following button inline -->
+    <button id="btnShow2" onclick="btn_clck();">Show RollNo</button>
+  </body>
+</html>

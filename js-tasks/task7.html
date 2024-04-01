@@ -1,0 +1,29 @@
+<!-- Write event handle for click of button (id=btnAdd) and 
+    show sum of entered numbers. -->
+
+<html>
+  <head>
+    <title>Task7</title>
+    <script type="text/javascript">
+      function Main() {
+        var btn = document.getElementById("btnAdd");
+        btn.onclick = function () {
+          // var v1 = document.getElementById("txtFirst").value;
+          // var v2 = document.getElementById("txtSecond").value;
+          var va1 = parseInt("v1");
+          var va2 = parseInt("v2");
+          val1 = Number(va1);
+          val2 = Number(va2);
+          var res = val1 + val2;
+          document.getElementById("txtResult").value = res;
+        };
+      }
+    </script>
+  </head>
+  <body onload="Main();">
+    First:<input type="text" id="txtFirst" /> <br />
+    Second:<input type="text" id="txtSecond" /> <br />
+    <button id="btnAdd">Add</button> <br />
+    Result:<input type="text" id="txtResult" />
+  </body>
+</html>

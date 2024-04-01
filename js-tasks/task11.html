@@ -1,0 +1,51 @@
+<!-- Create an array which should have some elements by default. 
+Perform following task on this array
+a) Iterate this array using “for” loop and print index & values.
+b) Iterate this array using “for in” loop and print index & values.
+c) Add data to array using key approach (e.g. arr[“ID] =1; arr[“Name”]=”ABC”).
+d) Perform tasks a) & b) again on updated array. -->
+
+<html>
+  <head>
+    <title>Task11</title>
+    <script type="text/javascript">
+      function Main() {
+        var arr = [1, 5, "ABC", true, 10];
+        arr.push(20);
+
+        //Task a
+        console.log("1---" + arr.length);
+        IterateArrayUsingFor(arr);
+
+        //Task b
+        console.log("2---" + arr.length);
+        IterateArrayUsingForIn(arr);
+
+        //Task c
+        arr.ID = 1;
+        arr.Name = "Zain";
+
+        //Task d
+        console.log("3---" + arr.length);
+
+        IterateArrayUsingFor(arr);
+        IterateArrayUsingForIn(arr);
+      } //end of Main
+
+      function IterateArrayUsingFor(arr) {
+        console.log("Iterate using for loop---------");
+        for (var i = 0; i < arr.length; i++) {
+          console.log("FOR - The value at index " + i + " is " + arr[i]);
+        }
+      }
+
+      function IterateArrayUsingForIn(arr) {
+        console.log("Iterate using for-in loop---------");
+        for (var i in arr) {
+          console.log("FOR-IN - The value at index " + i + " is " + arr[i]);
+        }
+      }
+    </script>
+  </head>
+  <body onload="Main();"></body>
+</html>

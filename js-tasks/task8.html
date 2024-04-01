@@ -1,0 +1,25 @@
+<!-- When You’ll click button (id=btnMe), it should show your roll number 
+    in alert after 2 seconds. Hint: setTimeOut function -->
+
+    <html>
+<head>
+<title>Task8</title>
+<script type="text/javascript">
+	function Main(){
+        var r_no = 6260 ; 
+        var btn = document.getElementById('btnMe');
+        btn.onclick = function(){
+            setTimeout(show_alert,2000);
+        }
+
+        function show_alert(){
+            alert("Roll No : " + r_no);
+        }
+	}
+</script>
+
+</head>
+<body onload="Main();">
+	<button id="btnMe">Click Me</button> <br>
+</body>
+</html>

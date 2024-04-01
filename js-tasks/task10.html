@@ -1,0 +1,54 @@
+<!-- Write code which will iterate array1 elements, convert elements at 
+    odd index in “Upper Case” and elements at even index in 
+    “lower case”. After conversion, add element in array2.
+
+For example
+array1 = ["Pak", "Ind","Lhr","Isb","PHYsics"]
+After your code is executed
+array2 should contain ["pak", "IND","lhr","ISB","physics"] -->
+
+<html>
+<head>
+<title>Task10</title>
+<script type="text/javascript">
+	function Main(){
+	
+	array1 = ["Pak", "Ind","Lhr","Isb","PHYsics"];
+    array2 = [];
+	
+	//Converting Array to a string and showing it on page
+	document.getElementById('data').innerText = array1.toString();
+	
+	var btn = document.getElementById('btnExecute');
+		
+		btn.onclick = function(){
+            for(var i=0;i<array1.length;i++){
+                if((i%2)==0){
+                    array2[i] = array1[i].toLowerCase();
+                }
+                else{
+                    array2[i] = array1[i].toUpperCase();
+                }
+            }
+
+            // for(var i=0;i<array1.length;i++){
+            //     console.log(array2[i]);
+            // }
+
+            var x = document.getElementById('data');
+            x.innerText = array2 ; 
+
+		};//end of onclick
+		
+	}//end of Main
+	
+	
+	
+</script>
+
+</head>
+<body onload="Main();">
+	<h1 id='data'></h1>
+	<button id="btnExecute">Execute</button> <br>
+</body>
+</html>

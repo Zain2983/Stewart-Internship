@@ -1,0 +1,38 @@
+<!-- Write code to find maximum number from the given array. -->
+
+<html>
+<head>
+<title>Task9</title>
+<script type="text/javascript">
+	function Main(){
+	
+	var arr = [5,3,2,4,1,10,0];
+	//Converting Array to a string and showing it on page
+	document.getElementById('data').innerText = arr.toString();
+	
+	var btn = document.getElementById('btnFind');
+		
+		btn.onclick = function(){
+			var max = 0;
+            for(var i=0;i<arr.length;i++){
+                if(arr[i]>max){
+                    max = arr[i];
+                }
+            }		
+            console.log("MAX : " + max );
+            var disp = document.getElementById('data');
+            disp.innerText = "Max : " +  max;  
+		};//end of onclick
+		
+	}//end of Main
+	
+	
+	
+</script>
+
+</head>
+<body onload="Main();">
+	<h1 id='data'></h1>
+	<button id="btnFind">Find Maximum</button> <br>
+</body>
+</html>

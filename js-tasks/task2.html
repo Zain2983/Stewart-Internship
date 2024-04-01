@@ -1,0 +1,88 @@
+<!-- Declare variables which should hold data of following types. 
+    You may assign some value according to variable type to the variables. 
+    Declare variable using literal/normal approach and also by using 
+    Constructor approach.
+
+Integer
+Float
+Boolean
+String
+Date
+undefined
+Array of integers
+Array of Strings
+Array of Mixed elements
+Object with properties (ID is 1, Name is “ABC”) -->
+
+
+
+<html>
+<head>
+<title>Task2</title>
+<script type="text/javascript">
+	//Declare a variable of type Integer 
+	var a1 = 10;
+    var a2= new Number(10);
+	console.log("Integer : " + a1);
+    console.log("Integer : " + a2);
+	//Declare a variable of type float
+	var b1 = 6.7
+	var b2 = new Number(6.7);
+    console.log("Float : " + b1);
+    console.log("Float : " + b2);
+	//Declare a variable of type Boolean
+	var c1 = true;
+    var c2 = new Boolean(true);
+    console.log("Boolean : " + c1);
+    console.log("Boolean : " + c2);
+	//Declare a variable of type String
+    var d1 = "Zain";
+    var d2 = new String("Zain");
+    console.log("String : " + d1);
+    console.log("String : " + d2);
+	//Declare a variable of type Date
+    var e1 = Date;
+    var e2 = new Date();
+    console.log("Date : " + e1);
+    console.log("Date : " + e2);
+	//Declare a variable of type undefined
+	var f1 ;
+    var f2 = undefined
+    console.log("Undefined : " + f1);
+    console.log("Undefined : " + f2);
+	//Declare a variable of type Array of Integers
+    var g1 = [1,2,3,4,5];
+    var g2 = new Array(1,2,3,4,5);
+    console.log("Array : " + g1);
+    console.log("Array : " + g2);
+	//Declare a variable of type Array of Strings
+    var h1 = ["Hello","My","Name","is","Zain"];
+    var h2 = new Array("Hello","My","Name","is","Zain");
+    console.log("Array : " + h1);
+    console.log("Array : " + h2);
+	//Declare a variable of type Array of Mixed Elements
+	var i1 = ["Hello",1,true,false,221,"done"];
+	var i2 = new Array("Trap",1,2,3,4,5,100,false,false,"Done");
+    console.log("Array with mixed elements : " + i1);
+    console.log("Array with mixed elements : " + i2);
+	//Declare a variable of type of Object with properties (ID is 1, Name is “ABC”)
+	var obj1 = {} ;
+    obj1.ID = 201
+    obj1.Name = "Zain";
+    console.log("Object --------------------")
+    for(var k in obj1){
+        console.log(k +" : "+ obj1[k] )
+    }
+
+    var obj2 = {ID:202,Name:"2nd Zain"}
+    console.log("Object --------------------")
+    for(var k in obj2){
+        console.log(k +" : "+ obj2[k] )
+    }
+	
+</script>
+
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!-- - Table is showing Semester No, Textbox to get GPA, Checkbox for selection
+- User may mark a checkbox "checked" if he wants to enter GPA for a semester.
+- When checkbox is checked, textbox should become normal otherwise disabled. -->
+
+<html>
+  <head>
+    <title>Task12</title>
+    <script type="text/javascript">
+      function Main() {
+        console.log("Just cheking if the code is working ");
+        //console.log(JSON.stringify(obj, null, 4));
+      } //end of Main
+
+      function chkClicked(obj) {
+        var txtBox = document.getElementById("txt" + obj.id.replace("chk", ""));
+        if (obj.checked) {
+          txtBox.disabled = false;
+        } else {
+          txtBox.disabled = true;
+        }
+      }
+    </script>
+  </head>
+  <body onload="Main();">
+    <table border="1px">
+      <thead>
+        <tr>
+          <td>Semester No</td>
+          <td>GPA</td>
+          <td></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><input type="text" id="txt1" disabled /></td>
+          <td>
+            <input type="checkbox" id="chk1" onclick="chkClicked(this);" />
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><input type="text" id="txt2" disabled /></td>
+          <td>
+            <input type="checkbox" id="chk2" onclick="chkClicked(this);" />
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><input type="text" id="txt3" disabled /></td>
+          <td>
+            <input type="checkbox" id="chk3" onclick="chkClicked(this);" />
+          </td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><input type="text" id="txt4" disabled /></td>
+          <td>
+            <input type="checkbox" id="chk4" onclick="chkClicked(this);" />
+          </td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td><input type="text" id="txt5" disabled /></td>
+          <td>
+            <input type="checkbox" id="chk5" onclick="chkClicked(this);" />
+          </td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td><input type="text" id="txt6" disabled /></td>
+          <td>
+            <input type="checkbox" id="chk6" onclick="chkClicked(this);" />
+          </td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td><input type="text" id="txt7" disabled /></td>
+          <td>
+            <input type="checkbox" id="chk7" onclick="chkClicked(this);" />
+          </td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td><input type="text" id="txt8" disabled /></td>
+          <td>
+            <input type="checkbox" id="chk8" onclick="chkClicked(this);" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
