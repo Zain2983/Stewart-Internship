@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="text/javascript">
+      var rowCounter = 0;
+      function ClickEventHandler() {
+        rowCounter++;
+
+        var row = document.createElement("div");
+        row.setAttribute("class", "row");
+
+        var span = document.createElement("span");
+        span.innerText = rowCounter + " Degree : ";
+        row.appendChild(span);
+
+        var inp = document.createElement("input");
+        inp.setAttribute("type","text");
+        inp.setAttribute("id","txtDegree");
+        row.appendChild(inp);
+
+        span = document.createElement("span");
+        span.innerText= "Name : " ; 
+        row.appendChild(span);
+
+        inp = document.createElement("input");
+        inp.setAttribute("type","text");
+        inp.setAttribute("id","txtName");
+        row.appendChild(inp);
+
+        span = document.createElement("span");
+        span.innerText = "Marks: " ; 
+        row.appendChild(span);
+
+        inp = document.createElement("input");
+        inp.setAttribute("type","text");
+        inp.setAttribute("id","txtMarks");
+        row.appendChild(inp);
+
+        inp = document.createElement("input");
+        inp.setAttribute("type","submit");
+        inp.setAttribute("id","btnRemove");
+        inp.setAttribute("value","Remove");
+
+        inp.onclick = function(){
+            var result = confirm("Do you want to remove ? ");
+            if(result){
+                var mc = document.getElementById("maincontainer");
+                mc.removeChild(this.parentNode);
+            }
+        }
+
+        row.appendchild(inp);
+        var maincontainer = document.getElementById("maincontainer");
+        maincontainer.appendChild(row); 
+
+      }
+    </script>
+  </head>
+  <body>
+    <h1>How to remove an element from a page</h1>
+    <div id="maincontainer"></div>
+
+    <div>
+      <input
+        type="submit"
+        id="btnAdd"
+        value="Add"
+        onclick="ClickEventHandler();"
+      />
+    </div>
+  </body>
+</html>

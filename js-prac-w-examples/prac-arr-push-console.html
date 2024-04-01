@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Practice</title>
+    <script>
+      function Main() {
+        var arr = new Array();
+        arr.push({ ID: 1, Name: "Zain1" });
+        arr.push({ ID: 2, Name: "Zain2" });
+        arr.push({ ID: 3, Name: "Zain3" });
+        arr.push({ ID: 4, Name: "Zain4" });
+        arr.push({ ID: 5, Name: "Zain5" });
+
+        var t = "";
+        for (var i = 0; i < arr.length; i++) {
+          console.log("ID : " + arr[i].ID);
+          console.log("Name : " + arr[i].Name);
+        }
+      }
+    </script>
+  </head>
+  <body onload="Main();">
+    <div id="container"></div>
+  </body>
+</html>

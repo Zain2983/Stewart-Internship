@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      function Main() {
+        var l = document.getElementById("lmkdelme");
+        l.onclick = function () {
+          var cont1 = document.getElementById("container");
+          cont1.removeChild(this);
+        };
+        var p = document.getElementById("lmkparentdelete");
+        p.onclick = function () {
+          var cont2 = document.getElementById("frm");
+          cont2.removeChild(this.parentNode);
+        };
+      }
+    </script>
+  </head>
+  <body onload="return Main();">
+    <h1>How to remove an element from a page</h1>
+    <form id="frm">
+      <div id="container" style="border: solid 2px red">
+        <a href="#" id="lmkdelme">Delete Me</a>
+        <br />
+        <a href="#" id="lmkparentdelete">Delete my parent</a>
+      </div>
+    </form>
+  </body>
+</html>
