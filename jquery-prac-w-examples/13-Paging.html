@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Paging Example</title>
+    <script src="../other-files/jquery-3.7.1.js"></script>
+	<style>
+		.currentpage{
+			display:block;
+		}
+		.page{
+			display: none;
+		}
+		.navlinks a{
+			margin: 5px;
+		}
+		.selectedpg{
+			color: red;
+			background-color: grey;
+			padding: 5px;
+		}
+	</style>
+    <script>
+      $(function () {
+        $("#lnkCreatePaging").click(function (e) {
+          var pageSize = Number($("#txtPageSize").val());
+
+          if (isNaN(pageSize) || pageSize <= 0) {
+            alert("Invalid Page Size");
+            return;
+          }
+
+          var paras = $(".main_wrapper p");
+
+          var pages = Math.ceil(paras.length / pageSize);
+
+          var startIndex = 0;
+          for (var i = 1; i <= pages; i++) {
+            var selItems = paras.slice(startIndex, i * pageSize);
+            selItems.wrapAll("<div class='page'/>");
+            startIndex = i * pageSize;
+
+			var lnk = $("<a href='#'>").text(i);
+
+			lnk.click(function(e){
+				$(".navlinks a.selectedpg").removeClass('selectedpg');
+
+				$(this).addClass('selectedpg');
+				var pgNo = $(this).text();
+
+				$(".main_wrapper div.currentpage").removeClass('currentpage').addClass('page');
+				$(".main_wrapper div.page:nth-child(" + pgNo + ")").removeClass('page').addClass('currentpage');
+
+			})
+
+			$(".navlinks").append(lnk);
+
+
+
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div>
+      Page Size: <input type="text" id="txtPageSize" />
+      <a href="#" id="lnkCreatePaging">Create Paging</a>
+    </div>
+    <div class="main_wrapper">
+      <p>ID: 1, Name: Bilal, Address: Lahore</p>
+      <p>ID: 2, Name: Bilal, Address: Lahore</p>
+      <p>ID: 3, Name: Bilal, Address: Lahore</p>
+      <p>ID: 4, Name: Bilal, Address: Lahore</p>
+      <p>ID: 5, Name: Bilal, Address: Lahore</p>
+      <p>ID: 6, Name: Bilal, Address: Lahore</p>
+      <p>ID: 7, Name: Bilal, Address: Lahore</p>
+      <p>ID: 8, Name: Bilal, Address: Lahore</p>
+      <p>ID: 9, Name: Bilal, Address: Lahore</p>
+      <p>ID: 10, Name: Bilal, Address: Lahore</p>
+      <div class="navlinks"></div>
+    </div>
+  </body>
+</html>
