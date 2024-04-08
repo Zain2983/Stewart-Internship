@@ -1,0 +1,58 @@
+<!-- 1- Get value of 'txtName' and show it in alert
+2- Get text of 'spName' and show it in alert
+3- Get selected value of 'cmbCountry'
+4- Get text of selected item of 'cmbCountry'
+5- Get html of 'divContainer' -->
+
+<html>
+<head>
+    <title>Task3</title>
+	<script src="../other-files/jquery-3.7.1.js" type="text/javascript"></script>
+	
+	<script>
+		
+		jQuery(document).ready(function(){
+			
+		    var $btn = jQuery("#btnOK");
+
+		    $btn.click(function () {
+		        
+		        //1- Get value of 'txtName' and show it in alert
+		        var $txtBtn = $("#txtName").val();
+                alert($txtBtn);
+		        //2- Get text of 'spName' and show it in alert
+		        var $spname = $("#spName").text();
+				alert($spname);
+		        //3- Get selected value of 'cmbCountry'
+		        var $cmcty = $("#cmbCountry").val();
+				alert("This is the value of selected option : " + $cmcty);
+		        //4- Get text of selected item of 'cmbCountry'
+		        var $cmcty1 = $("#cmbCountry option:selected").text();
+				alert("This is the text of selected option : " + $cmcty1);
+		        //5- Get html of 'divContainer'
+		        var $h = $("#divContainer").html();
+				alert($h);
+		        return false;
+		    });
+
+		});
+	</script>
+	
+</head>
+<body>
+    <input type="button" id="btnOK" value="OK" />
+    <div id="divContainer">
+        <input type="text" id="txtName"/>
+        <br />
+        <span id="spName">This is Span Tag</span>
+        <br />
+        <select id="cmbCountry">
+            <option value="1">Lahore</option>
+            <option value="2">Karachi</option>
+			<option value="3">Pikhawar</option>
+			<option value="4">Gwadar</option>
+			<option value="234">Sydney</option>
+        </select>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!-- 1- Find all spans which has class 'name', and On click of span, display its text in alert & on console -->
+
+
+<html>
+<head>
+    <title>Task6</title>
+    <script src="../other-files/jquery-3.7.1.js" type="text/javascript"></script>
+
+    <script>
+
+        jQuery(document).ready(function () {
+
+            //1- Find all spans which has class 'name', and On click of span, display its text in alert & on console
+
+            $(".name").click(function(){
+                var x = $(".name").text();
+                var t = $(this).text();
+                //alert(t);
+                console.log(t);
+                //console.log(x)
+            });
+            
+
+        });
+    </script>
+
+</head>
+<body>
+    <span class="name">Span 1</span><br />
+    <span class="name">Span 2</span><br />
+    <span class="name">Span 3</span><br />
+    <span >Span 4</span><br />
+</body>
+</html>

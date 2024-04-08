@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Task5</title>
+    <script
+      src="../other-files/jquery-3.7.1.js"
+      type="text/javascript"
+    ></script>
+
+    <script>
+      jQuery(document).ready(function () {
+        $("#btnOK1").click(function () {
+          //1- Find all paragraphs which has class 'row'
+          var x = $(".row");
+
+          //2- Then append 'pakistan' text in those paragraphs
+          x.each(function () {
+            var t = $(this).text();
+            t += "Pakistan";
+            $(this).text(t);
+          });
+          return false;
+        });
+
+        $("#btnOK2").click(function () {
+          //1- Find all paragraphs which has class 'row'
+          var x = $("p");
+
+          //2- Then append 'pakistan' text in those paragraphs
+          x.each(function () {
+            var t = $(this).text();
+            t += "Pakistan";
+            $(this).text(t);
+          });
+          return false;
+        });
+
+
+        
+      });
+    </script>
+  </head>
+  <body>
+    <input type="button" id="btnOK1" value="Click Me for adding Pakistan to class row" />
+    <br><br>
+    <input type="button" id="btnOK2" value="Click Me for adding Pakistan to all p tags" />
+
+    <p class="row">I am para1</p>
+    <p class="row">I am para2</p>
+    <p>I am para3</p>
+    <p class="row">I am para4</p>
+  </body>
+</html>
